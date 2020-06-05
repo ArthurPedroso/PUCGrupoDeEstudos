@@ -8,9 +8,9 @@ public class Bloco1_04_06_2020
     {
         //comenatarios//
         
-        //-----variaveis-----//
-        
         //camelCase vs snake_case
+        
+        //-----variaveis-----//        
         
         //Número inteiro. tem precisão de (32 bits) 
         int inteiro = 0;
@@ -31,7 +31,7 @@ public class Bloco1_04_06_2020
         //String 
         String conjuntoDeChars = "eu não gosto muito do editor do bluej";
         
-        System.out.println("println imprime coisas");
+        //System.out.println("println imprime coisas");
         
         //-----variaveis-----//
         
@@ -41,12 +41,14 @@ public class Bloco1_04_06_2020
         int somaX = 2;
         int somaY = 3;
         somaX = somaX + somaY;
+        somaX += somaY;
         
         //Subtracao
         float floatSubX = 5.3544f;
         int intSubZ = 5;
         
         floatSubX = floatSubX - intSubZ;    
+        //System.out.println(floatSubX);
         
         //Multiplicacao
         int multX = 4;
@@ -59,6 +61,7 @@ public class Bloco1_04_06_2020
         double divY = 2.;
         
         double resultadoDiv = divX / divY;
+        //System.out.println(resultadoDiv);
         
         //Resto
         int restX = 9;
@@ -67,9 +70,10 @@ public class Bloco1_04_06_2020
         
         //Incremento e decremento
         int inc = 3;
-        inc++;
+        inc++;//=4
+        
         int dec = 5;
-        dec--;
+        dec--;//=4
         
         //Operadores logicos
         
@@ -111,31 +115,31 @@ public class Bloco1_04_06_2020
         {
             if(condicao3)
             {
-                
+                //1
             }
             else
             {
-                
+               //2 
             }
         }
         else if(condicao2)
         {
             if(condicao3)
             {
-                
+                //3
             }
             else
             {
-                
+                //4
             }
         }    
         else
         {
-            
+            //5
         }
         
         //switch
-        int numeroParaSwitch = 10;
+        int numeroParaSwitch = 5;
         switch(numeroParaSwitch)
         {
             case 2:
@@ -145,22 +149,35 @@ public class Bloco1_04_06_2020
             System.out.println("o numero é 5");
                 break;
             case 10:
-            System.out.println("o numero é 10");
+            //System.out.println("o numero é 10");
+                break;
+            default:
+            //awdawdawdwadw
                 break;
         }
         
         //while
-        boolean condicaoWhile = false;
-        while(condicaoWhile)
+        boolean condicaoWhile = true;
+        while(!condicaoWhile) // false == false
         {
             System.out.println("to dentro do while >:)");            
         }
         
-        
-        //for
-        for(int i = 0; i < 10; i++)
+        do
         {
-            System.out.println("to dentro do for >:O");  
+            System.out.println("to dentro do do while >:)");    
+        }while(!condicaoWhile);
+        
+        
+        int indice = 0;
+        while(indice < 10)
+        {
+            indice++;
+        }
+        //for
+        for(char i = 0; i < 10; i++)
+        {
+            //System.out.println("to dentro do for >:O");  
         }
         
         //----Condicionais---//
