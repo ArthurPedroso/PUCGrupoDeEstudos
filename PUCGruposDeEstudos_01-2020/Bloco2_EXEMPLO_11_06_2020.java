@@ -28,16 +28,16 @@ public class Bloco2_EXEMPLO_11_06_2020
         System.out.println(_textToPrint);
     }
     //Funcao void com parametro. Não retorna nada, mas recebe um array de chars e arrays de inteiros para a posicao x e y dos objetos.
-    private static void renderizaCanvas(List<Character> _charDosObjetos, List<Integer> _xPosList, List<Integer> _yPosList)
+    private static void renderizaCanvas(List<DadosDeObjeto> _dadosDeObjeto)
     {
         String buffer = "";
         char[][]canvas = new char[10][10];
         
         limpaTerminal();
         
-        for(int i = 0; i < _charDosObjetos.size(); i++)
+        for(int i = 0; i < _dadosDeObjeto.size(); i++)
         {
-            canvas[_yPosList.get(i)][_xPosList.get(i)] = _charDosObjetos.get(i);
+            canvas[_dadosDeObjeto.get(i).XPos][_dadosDeObjeto.get(i).YPos] = _dadosDeObjeto.get(i).CharDoObjeto;
         }
         
         for(int x = 0; x < canvas.length; x++)
@@ -81,11 +81,9 @@ public class Bloco2_EXEMPLO_11_06_2020
             adicionaObjeto(dadosDeObjeto, 'Y', (posXDoObjetoTeste) % 10, 6);
             
             
-            renderizaCanvas(charListDosObjetos, xPosList, yPosList);
+            renderizaCanvas(dadosDeObjeto);
             
-            charListDosObjetos.clear();
-            xPosList.clear();
-            yPosList.clear();
+            dadosDeObjeto.clear();
         }        
     }
 }
