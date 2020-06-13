@@ -1,4 +1,5 @@
 
+
 /*
  *Doc codigo
  */
@@ -175,11 +176,29 @@ public class Bloco1_04_06_2020
             indice++;
         }
         //for
-        for(char i = 0; i < 10; i++)
-        {
-            //System.out.println("to dentro do for >:O");  
+        for(int i = 0; i < 10; i++)
+        {            
+            System.out.println("to dentro do for >:| "+i);
+            if(i == 5) break;
+            //fodase
+            System.out.println("to dentro do for >:O "+i);  
         }
         
+        //comandos de loop: continue, break;
+        for(int i = 0; i < 10; i++)
+        {            
+            System.out.println("to dentro do for >:| "+i);
+            if(i == 5) break; //ejeta
+            //fodase
+            System.out.println("to dentro do for >:O "+i);  
+        }
+        for(int i = 0; i < 10; i++)
+        {            
+            System.out.println("to dentro do for >:| "+i);
+            if(i == 5) continue; //skipa
+            //fodase
+            System.out.println("to dentro do for >:O "+i);  
+        }
         //----Condicionais---//
     }
 }

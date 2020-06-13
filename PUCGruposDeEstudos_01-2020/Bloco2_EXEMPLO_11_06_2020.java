@@ -5,6 +5,18 @@ import java.util.*;
  */
 public class Bloco2_EXEMPLO_11_06_2020
 {
+    private static class DadosDeObjeto
+    {
+        public char CharDoObjeto;
+        public int XPos;
+        public int YPos;
+        public DadosDeObjeto(char _CharDoObjeto, int _XPos, int _YPos)
+        {
+            CharDoObjeto = _CharDoObjeto;
+            XPos = _XPos;
+            YPos = _YPos;
+        }
+    }
     //Funcao void sem parametro.  Não retorna nada e não recebe nada
     private static void limpaTerminal()
     {
@@ -52,24 +64,21 @@ public class Bloco2_EXEMPLO_11_06_2020
     {        
         Thread.sleep(66);//pausa por 33 milisec
     }
-    private static void adicionaObjeto(List<Character> _charDosObjetos, List<Integer> _xPosList, List<Integer> _yPosList, char _doObjeto, int _xPos, int _yPos)
+    private static void adicionaObjeto(List<DadosDeObjeto> _dadosDeObjeto, char _doObjeto, int _xPos, int _yPos)
     {
-        _charDosObjetos.add(_doObjeto);
-        _xPosList.add(_xPos);
-        _yPosList.add(_yPos);
+        _dadosDeObjeto.add(new DadosDeObjeto(_doObjeto, _xPos, _yPos));
     }
     public static void main(String[] args)
     {
-        List<Character> charListDosObjetos = new ArrayList<Character>();
-        List<Integer> xPosList = new ArrayList<Integer>();
-        List<Integer> yPosList = new ArrayList<Integer>();
+        
+        List<DadosDeObjeto> dadosDeObjeto = new ArrayList<DadosDeObjeto>();
         
         int posXDoObjetoTeste = 0;
         
         while(true)
         {
-            adicionaObjeto(charListDosObjetos, xPosList, yPosList, 'X', (posXDoObjetoTeste++) % 10, 5);
-            adicionaObjeto(charListDosObjetos, xPosList, yPosList, 'Y', (posXDoObjetoTeste) % 10, 6);
+            adicionaObjeto(dadosDeObjeto, 'X', (posXDoObjetoTeste++) % 10, 5);
+            adicionaObjeto(dadosDeObjeto, 'Y', (posXDoObjetoTeste) % 10, 6);
             
             
             renderizaCanvas(charListDosObjetos, xPosList, yPosList);
